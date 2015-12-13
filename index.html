@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Development for Designers</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="simple">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -37,341 +40,855 @@
 	<body>
 
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+				<!-- INTRODUCTION -->
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<img class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/381436/screenshots/1769466/autopsy_1x.png">
+					<small class="tiny">Image by Mark Tarnashinski</small>
+					<h2>Design & Code</h2>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+						<small>
+							Omri Mor &middot; Netcraft Academy UX course
+						</small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
+					<img width="150" class="no-border" style="border-radius: 50%;" data-src="images/omrimor.jpg">
+					<h4>I'm the guy holding the bunny</h4>
 					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+						<small>
+							I've been designing since 2004. <br>
+							Most of my work these days is in that field that connects between<br>
+							Design, Code and Content (some people like to call it UX).<br>
+							I really like what I do.
+						</small>
 					</p>
 				</section>
 
 				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
+					<img width="200" class="no-border" data-src="images/hello.png">
+					<h2>Nice to meet you :)</h2>
 				</section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				<!-- DESIGN PROCESS -->
+				<section data-background="images/pd.jpeg">
+					<h2 class="white-text">What is Product Design?</h2>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<p><small class="negative">What is product design</small></p>
+					<h2>Product Design is more</h2>
+				</section>
 
-    var nodes = document.querySelectorAll( selector );
+				<section>
+					<p><small class="negative">What is product design</small></p>
+					<h4>UX Designers</h4>
+					<h4 class="fragment">Graphic or Visual Designers</h4>
+					<h4 class="fragment">Motion or Animation Designers</h4>
+					<h4 class="fragment">User Researchers</h4>
+					<h4 class="fragment">Data Analysts</h4>
+					<h4 class="fragment">Prototypers</h4>
+					<h4 class="fragment">Business Strategists</h4>
+				</section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+				<section>
+					<p><small class="negative">What is product design</small></p>
+					<p>
+						Classically, all have been individual roles. All of them still are. They are also all necessary components of an individual Product Designer.
+					</p>
+				</section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+				<section>
+					<p><small class="negative">What is product design</small></p>
+					<h2>Product Design is the whole process</h2>
+					<p>
+						Identify, investigate, and validate the problem,<br>
+						and ultimately craft, design, test and ship the solution.
+					</p>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">What is product design</small></p>
+					<h4>Traditional product development process - waterfall</h4>
+					<ul>
+						<li class="fragment">
+							<div class="circle green">
+								<span class="circle-text">Wireframes</span>
+							</div>
+						</li>
+						<li class="fragment">
+							<div class="circle blue">
+								<span class="circle-text">Design</span>
+							</div>
+						</li>
+						<li class="fragment">
+							<div class="circle purple">
+								<span class="circle-text">Front End</span>
+							</div>
+						</li>
+						<li class="fragment">
+							<div class="circle orange">
+								<span class="circle-text">Back End</span>
+							</div>
+						</li>
+						<li class="fragment">
+							<div class="circle red">
+								<span class="circle-text">Launch</span>
+							</div>
+						</li>
+					</ul>
+					<p class="fragment">
+						<small>
+							The goal is to build the entirely of a product
+							one stage at a time, so design only occurs once and you only
+							have a functioning product at the end
+						</small>
+					</p>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">What is product design</small></p>
+					<h4>Modern product development process - agile</h4>
+					<ul>
+						<li class="fragment" style="margin-right: -70px;">
+							<div class="circle green">
+								<span class="circle-text">Wireframes</span>
+							</div>
+						</li>
+						<li class="fragment" style="margin-right: -70px;">
+							<div class="circle blue">
+								<span class="circle-text">Design</span>
+							</div>
+						</li>
+						<li class="fragment" style="margin-right: -70px;">
+							<div class="circle purple">
+								<span class="circle-text">Front End</span>
+							</div>
+						</li>
+						<li class="fragment">
+							<div class="circle orange">
+								<span class="circle-text">Back End</span>
+							</div>
+						</li>
+						<li class="fragment">
+							<div class="circle red">
+								<span class="circle-text">Launch</span>
+							</div>
+						</li>
+					</ul>
+					<p class="fragment">
+						<small>
+							The goal is to have something that is functional
+							at the end of each sprint and iterate over the mini-cycle
+							many times adding new features and improvements
+						</small>
+					</p>
+				</section>
+
+				<!-- DESIGNERS CODING -->
+				<section data-background="images/hipster.jpeg">
+					<h2 class="white-text">Should designers learn to code?</h2>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<h2>Well...yes...no...maybe...</h2>
+					<h4>(I think they should)</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img class="no-border" data-src="http://i.imgur.com/AyWQHye.gif">
+					<h4>Knowing your Medium makes you a better designer</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img width="400" class="no-border" data-src="http://media.giphy.com/media/VgNQdejHFZJdu/giphy.gif">
+					<h4>Improves your communication with the developers</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img width="400" class="no-border" data-src="http://33.media.tumblr.com/9b21da9f701734d8fa23de23f922833b/tumblr_inline_ns3uhoIV641t9bsnt_500.gif">
+					<h4>Gain greater control over your work</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img class="no-border" data-src="http://33.media.tumblr.com/1535e592a791960f84df5951c01f2a1f/tumblr_inline_nk36jn4ZeG1t9bsnt.gif">
+					<h4>Web development is design</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img class="no-border" data-src="http://38.media.tumblr.com/2d4d6d08ed2c8ee52d5919608ace2346/tumblr_inline_nlqf8msmFh1t9bsnt.gif">
+					<h4>Makes you a powerful asset to a team</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img class="no-border" data-src="http://38.media.tumblr.com/8e1c44c1f44bb64c20bce4ec6fb3603c/tumblr_inline_ns00blBhV11t9bsnt_500.gif">
+					<h4>Learning is easier than it’s ever been before</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img class="no-border" data-src="http://31.media.tumblr.com/502940fa238a6892435b731a502ef4c4/tumblr_inline_nmitdwbKhe1t9bsnt_500.gif">
+					<h4>Demand for designers who have development skills</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Should designers learn to code?</small></p>
+					<img width="450" class="no-border" data-src="https://cdn-images-1.medium.com/max/800/1*TEHNrxzes9tFq2OxVV59zQ.jpeg">
+				</section>
+
+				<!-- PERSONAL EXAMPLES -->
+				<section data-background="images/case.jpg">
+					<h2 class="white-text">Personal Examples</h2>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples</small></p>
+					<img class="no-border stretch" data-src="images/lightbox.png">
+					<h3>Lightbox Style Guide</h3>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Lightbox</small></p>
+					<img width="700" class="no-border" data-src="images/atomic.jpg">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Lightbox</small></p>
+					<img width="750" class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/413605/screenshots/1937914/attachments/334536/redlines.png">
+					<small class="tiny">Image by Patrick Williams</small>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Lightbox</small></p>
+					<img width="700" class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/3797/screenshots/1669299/attachments/263198/airbnb-web-toolkit.png">
+					<small class="tiny">Image by Derek Bradley</small>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Personal Examples - Lightbox</small></p>
+					<ul>
+						<li>
+							<a href="http://ux.mailchimp.com/patterns/" target="_blank">
+								<img width="150" class="no-border" data-src="images/freddie.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="http://rizzo.lonelyplanet.com/styleguide/design-elements/colours" target="_blank">
+								<img style="margin-top: 45px;" width="170" class="no-border" data-src="images/lonely.png">
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Lightbox</small></p>
+					<h4 class="fragment">Single source of truth</h4>
+					<h4 class="fragment">Consistency</h4>
+					<h4 class="fragment">Reusable</h4>
+					<h4 class="fragment">Save time for dev</h4>
+				</section>
+
+
+				<section>
+					<p><small class="negative">Personal Examples</small></p>
+					<img class="no-border stretch" data-src="https://d13yacurqjgara.cloudfront.net/users/82565/screenshots/1835170/topoftop.gif">
+					<h3>Prototyping</h3>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Prototyping</small></p>
+					<img class="no-border stretch" data-src="https://d13yacurqjgara.cloudfront.net/users/530801/screenshots/2344029/attachments/447757/drib-nev-3.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Prototyping</small></p>
+					<iframe width="700" height="600" data-src="http://framerjs.com/examples/preview/#google-now-overview.framer"></iframe>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Prototyping</small></p>
+					<img width="400" class="no-border" data-src="images/ucd.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Prototyping</small></p>
+					<h4 class="fragment">
+						“A prototype is worth a thousand meetings”
+						<span><small style="font-weight: normal;"><i>
+							Mike Davidson, VP of Design, Twitter
+						</i></small></span>
+					</h4>
+					<h4 class="fragment">Export code directly to production</h4>
+					<h4 class="fragment">Proof Of Concept (POC)</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Prototyping</small></p>
+					<a style="display: block; margin-bottom: 20px;" href="http://framerjs.com/" target="_blank">
+						<img width="150" class="no-border" data-src="images/framer.png">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples</small></p>
+					<img class="no-border stretch" data-src="https://cdn-images-1.medium.com/max/2000/1*t3xWIh0Nkwd0yo1IJiKkAA.png">
+					<h3>Custom Plugins</h3>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Plugins</small></p>
+					<img class="no-border stretch" data-src="https://d13yacurqjgara.cloudfront.net/users/530801/screenshots/2344029/attachments/447757/drib-nev-3.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Plugins</small></p>
+					<img class="no-border stretch" data-src="images/fonts-colors.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Plugins</small></p>
+					<img class="no-border stretch" data-src="images/show.gif">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples</small></p>
+					<img class="no-border stretch" data-src="https://d13yacurqjgara.cloudfront.net/users/37530/screenshots/1673109/attachments/264096/Ideas_Large.jpg">
+					<small class="tiny">Image by Vic Bell</small>
+					<h3>Side Projects</h3>
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Side Projects</small></p>
+					<img width="550" class="no-border" data-src="http://iosdesign.ivomynttinen.com/content/iphone-pixels-and-points.jpg">
+				</section>
+
+				<section>
+					<p><small class="negative">Personal Examples - Side Projects</small></p>
+					<iframe width="900" height="600" data-src="http://omrimor.co.il/density/"></iframe>
+				</section>
+
+				<!-- WEB BUILDING BLOCKS -->
+				<section data-background="https://d13yacurqjgara.cloudfront.net/users/717483/screenshots/2233875/attachments/415987/lego_pattern.jpg">
+					<h2 class="negative">Web development</h2>
+				</section>
+
+				<section>
+					<p><small class="negative">Web development</small></p>
+					<img class="no-border" width="500" data-src="https://d13yacurqjgara.cloudfront.net/users/593304/screenshots/2363240/img.jpg">
+					<h4>Front End v.s. Back End</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Web development</small></p>
+					<div style="position: relative;top:0;left:0;">
+						<img style="position: relative;top:0;left:0;z-index:1;"
+							class="no-border" data-src="images/ui01.png">
+						<img style="position: absolute;top:0;left:24px;z-index:2;"
+							class="no-border fragment" data-src="images/ui02.png">
+						<img style="position: absolute;top:0;left:24px;z-index:3;"
+							class="no-border fragment" data-src="images/ui03.png">
+					</div>
+				</section>
+
+				<section>
+					<p><small class="negative">Web development</small></p>
+					<img class="no-border" data-src="images/backend.png">
+					<h4>Back end</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Web development</small></p>
+					<img width="600" class="no-border" data-src="images/frontend.png">
+					<h4>Front end</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Web development</small></p>
+					<img class="no-border" data-src="images/frondend-modern.png">
+					<h4>Front end</h4>
+				</section>
+
+
+				<section>
+					<p><small class="negative">The browser</small></p>
+					<img width="200" class="no-border" data-src="images/browsers.png">
+					<h5 class="fragment highlight-current-blue">Gets HTML from server</h5>
+					<h5 class="fragment highlight-current-blue">Read the HTML and try to paint it on the page</h5>
+					<h5 class="fragment highlight-current-blue">Request additional files we told it to load (CSS, JS...)</h5>
+					<h5 class="fragment highlight-current-blue">Read them, apply them to the page, then repaint</h5>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Three pillars</small></p>
+					<ul>
+						<li class="fragment">
+							<img class="no-border" data-src="images/html.png">
+							<p>
+								<small>
+									<strong>HTML</strong><br>
+									Content
+								</small>
+							</p>
+						</li>
+						<li class="fragment">
+							<img class="no-border" data-src="images/css.png">
+							<p>
+								<small>
+									<strong>CSS</strong><br>
+									Presentation
+								</small>
+							</p>
+						</li>
+						<li class="fragment">
+							<img class="no-border" data-src="images/javascript.png">
+							<p>
+								<small>
+									<strong>JavaScript</strong><br>
+									behaviour
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars</small></p>
+					<h3>Learning a new language</h3>
+					<h4><span class="fragment">Syntax</span> <span class="fragment">= Structure</span></h4>
+					<h4><span class="fragment">Semantics</span><span class="fragment"> = Meaning</span></h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img width="100" class="no-border" data-src="images/html.png">
+					<h4 class="fragment">Scripting, not a programming language</h4>
+					<h4 class="fragment">Describes the content of the page</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img width="700" class="no-border" data-src="images/html-structure.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img width="1000" class="no-border" data-src="images/tags.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<a href="http://www.htmldog.com/references/html/tags/" target="_blank">
+						<img width="200" class="no-border" data-src="http://www.ironpaper.com/webintel/wp-content/uploads/2013/11/code2-400x400.png">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img class="no-border" data-src="images/html-element.png">
+				</section>
+
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<a href="http://motherfuckingwebsite.com/" target="_blank">
+						<img class="no-border" data-src="images/devtools.png">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<a href="http://codepen.io/omrimor/full/epaobm/" target="_blank">
+						<img width="600" class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/267/screenshots/1926438/loading.gif">
+					</a>
+					<small class="tiny">Image by Phil Coffman</small>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img class="no-border stretch" data-src="images/html5.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/6014/screenshots/466898/mythology2.jpg">
+					<h4>HTML5 Myths</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - HTML</small></p>
+					<img width="200" class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/6014/screenshots/466898/mythology2.jpg">
+					<h4 class="fragment">My browser doesn't support HTML5</h4>
+					<h4 class="fragment">Responsive websites are build in HTML5</h4>
+					<h4 class="fragment">Writing for mobile is in HTML5</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<img width="100" class="no-border" data-src="images/css.png">
+					<h4 class="fragment">Not a programming language</h4>
+					<h4 class="fragment">Defines the appearance of elements on the page</h4>
+					<h4 class="fragment">Takes a day to learn, a lifetime to master</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<img class="no-border" data-src="images/css-structure.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<a href="http://codepen.io/omrimor/full/vNwMPp/" target="_blank">
+						<img width="300" class="no-border" data-src="images/box-model.png">
+					</a>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Three pillars - CSS</small></p>
+						<ul>
+							<li style="margin-right: 0;">
+								<a href="http://codepen.io/omrimor/full/wKbbMO/" target="_blank">
+									<img width="450" class="no-border" data-src="//css-tricks.com/wp-content/csstricks-uploads/absolute-inside-relative2.png">
+								</a>
+							</li>
+							<li style="margin-right: 0;">
+								<a href="http://codepen.io/omrimor/full/wKbbMO/" target="_blank">
+									<img width="450" class="no-border" data-src="//css-tricks.com/wp-content/csstricks-uploads/absolute-inside-relative.png">
+								</a>
+							</li>
+						</ul>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<img class="no-border" data-src="images/before-after.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<a href="https://pattle.github.io/simpsons-in-css/" target="_blank">
+						<img class="no-border" data-src="images/simpsons.jpg">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<a href="http://mediaqueri.es/" target="_blank">
+						<img width="600" class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/1344651/800x600---elf-village-14.5sec.gif">
+					</a>
+					<small class="tiny">Image by UENO.</small>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<img width="600" class="no-border" data-src="images/mm.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<a href="http://getbootstrap.com/" target="_blank">
+						<img width="150" class="no-border" data-src="images/bootstrap.png">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<iframe width="600" height="500" data-src="https://daneden.github.io/animate.css/"></iframe>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<a href="http://www.csszengarden.com/" target="_blank">
+						<img width="600" class="no-border" data-src="https://d13yacurqjgara.cloudfront.net/users/372/screenshots/1326145/zen-gardening.png">
+					</a>
+					<small class="tiny">Image by Trent Walton</small>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - CSS</small></p>
+					<h4>This is just the begining...</h4>
+					<p>
+						<span class="fragment">Z-index</span>
+						<span class="fragment">, Stacking contect</span>
+						<span class="fragment">, Inheritance</span>
+						<span class="fragment">, Floats</span>
+						<span class="fragment">, Specificity</span>
+						<span class="fragment">, Accessibility</span>
+						<span class="fragment"> and the list goes on..</span>
+					</p>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<img width="100" class="no-border" data-src="images/javascript.png">
+					<h4 class="fragment">Programming language of the web</h4>
+					<h4 class="fragment">Complex interactions with the user in real-time</h4>
+					<h4 class="fragment">Has logic (if/else, conditions...)</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<img class="no-border" data-src="images/events.jpg">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<img width="100" class="no-border" data-src="images/jquery.png">
+					<h4 class="fragment">Feature-rich JavaScript library</h4>
+					<h4 class="fragment">It makes things like HTML manipulation, event handling and animation much simpler</h4>
+					<h4 class="fragment">Easy to use API that works across a multitude of browsers</h4>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<h5>JavaScript</h5>
+					<pre class="no-border">
+						<code class="hljs" contenteditable>
+Function changeBackground(color) {
+    Document.body.style.background = color;
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+Onload=”changeBackground (‘red’);”
+						</code>
+					</pre>
+					<h5>jQuery</h5>
+					<pre class="no-border">
+						<code class="hljs" contenteditable>
+$(‘body’).css(‘background’, ‘#ccc’);
+						</code>
+					</pre>
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<img width="750" class="no-border" data-src="images/jplugin.png">
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<img class="no-border" data-src="images/api.png">
+					<p class="fragment">
+						<small>
+							Think of it as a middleman between a programmer and an application. Accepts requests and, if that request is allowed, returns the data. The middleman also informs programmers about everything they can request, exactly how to ask for it and how to receive it.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<p>
+						<strong>Without API:</strong><br>
+						<small>
+							An app finds the current weather in London by opening http://www.weather.com/
+							and reading the webpage like a human does, interpreting the content.
+						</small>
+					</p>
+					<p>
+						<strong>With API:</strong><br>
+						<small>
+							An app finds the current weather in London by sending a message to the weather.com API.
+							The weather.com API then replies with a structured response.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<a href="http://masonry.desandro.com/" target="_blank">
+						<img width="400" class="no-border" data-src="images/masonry.jpg">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<iframe width="700" height="500" data-src="http://codepen.io/sol0mka/full/ogOYJj/"></iframe>
+					<p>
+						<small>
+							<a href="http://codepen.io/sol0mka/full/yNOage/" target="_blank">mo.js</a>
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<a href="http://d3js.org/" target="_blank">
+						<img width="600" class="no-border" data-src="images/d3.png">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<a href="http://snapsvg.io/" target="_blank">
+						<img width="600" class="no-border" data-src="images/snap.png">
+					</a>
+				</section>
+
+				<section>
+					<p><small class="negative">Three pillars - JavaScript</small></p>
+					<a href="http://threejs.org/" target="_blank">
+						<img width="600" class="no-border" data-src="images/three.png">
+					</a>
+				</section>
+
+				<!-- PRACTICE -->
+				<section data-background="https://cdn-images-1.medium.com/max/1800/1*c4u38lUiJigK5TLLxHAukA.png">
+					<h2 class="white-text">Let's Practice</h2>
+				</section>
+
+				<section>
+					<p><small class="negative">Practice</small></p>
+					<p data-height="600" data-theme-id="0" data-slug-hash="pjmwzw" data-default-tab="result" data-user="omrimor" class='codepen'>See the Pen <a href='http://codepen.io/omrimor/pen/pjmwzw/'>HTML/CSS 101</a> by Omri Mor (<a href='http://codepen.io/omrimor'>@omrimor</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+					<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+				</section>
+
+				<!-- LEARN -->
+				<section data-background="https://d13yacurqjgara.cloudfront.net/users/5202/screenshots/1539835/attachments/234282/ditb-details-01.png">
+					<h2 class="white-text">Learning by yourself</h2>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Learning by yourself</small></p>
+					<h4>Wikis</h4>
+					<p>
+						When you need textbox info on Syntax or component
+					</p>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>
+							<a href="https://developer.mozilla.org/en-US/" target="_blank">
+								<img width="150" class="no-border" data-src="images/mdn.png">
+							</a>
+						</li>
+						<li>
+							<a href="http://www.w3schools.com/" target="_blank">
+								<img class="no-border" data-src="images/w3c.png">
+							</a>
+						</li>
 					</ul>
 				</section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
+				<section class="floating-list">
+					<p><small class="negative">Learning by yourself</small></p>
+					<h4>Online courses</h4>
 					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+						When you want Interactive courses on how to program
 					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+						<li>
+							<a href="https://www.codecademy.com/" target="_blank">
+								<img width="350" class="no-border" data-src="images/codcademy.png">
+							</a>
+						</li>
+						<li>
+							<a href="https://teamtreehouse.com/" target="_blank">
+								<img width="350" class="no-border" data-src="images/treehouse.png">
+							</a>
+						</li>
 					</ul>
 				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
+				<section class="floating-list">
+					<p><small class="negative">Learning by yourself</small></p>
+					<h4>Blogs, Articles</h4>
 					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+						When you want to enrich your knowledge
+					</p>
+					<ul>
+						<li>
+							<a href="http://alistapart.com/" target="_blank">
+								<img width="100" class="no-border" data-src="images/alistapart.png">
+							</a>
+						</li>
+						<li>
+							<a href="http://www.smashingmagazine.com/" target="_blank">
+								<img width="100" class="no-border" data-src="images/sm.png">
+							</a>
+						</li>
+						<li>
+							<a href="http://css-tricks.com/" target="_blank">
+								<img width="100" class="no-border" data-src="images/csstricks.png">
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Learning by yourself</small></p>
+					<h4>Expert Advice</h4>
+					<p>
+						When you have a specific question and need help
+					</p>
+					<a href="http://stackoverflow.com/" target="_blank">
+						<img width="150" class="no-border" data-src="images/so.png">
+					</a>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Learning by yourself</small></p>
+					<h4>Tutorials</h4>
+					<p>
+						Inspiration and best practices
+					</p>
+					<ul>
+						<li>
+							<a href="http://tympanus.net/codrops/" target="_blank">
+								<img width="100" class="no-border" data-src="images/codrops.png">
+							</a>
+						</li>
+						<li>
+							<a href="http://webdesign.tutsplus.com/" target="_blank">
+								<img width="180" class="no-border" data-src="images/tuts.png">
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<section class="floating-list">
+					<p><small class="negative">Learning by yourself</small></p>
+					<h4>People</h4>
+					<p>
+						Follow industry influencers and leaders
+					</p>
+					<ul>
+						<li>
+							<a href="https://twitter.com/brad_frost?lang=en" target="_blank">
+								<img width="100" class="no-border" data-src="https://pbs.twimg.com/profile_images/499941427820769281/8tYwgR5r_400x400.png">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/LeaVerou?lang=en" target="_blank">
+								<img width="100" class="no-border" data-src="https://pbs.twimg.com/profile_images/584963092120899586/TxkxQ7Y5_400x400.png">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/hakimel?lang=en" target="_blank">
+								<img width="100" class="no-border" data-src="https://pbs.twimg.com/profile_images/515506205406408704/rpmu0mf2_400x400.jpeg">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/zeldman?lang=en" target="_blank">
+								<img width="100" class="no-border" data-src="https://pbs.twimg.com/profile_images/626137507512610816/e_fXml7r_400x400.jpg">
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<!-- CLOSING -->
+				<section>
+					<h2>Thank You</h2>
+					<p>
+						<small>
+							<a href="https://twitter.com/omrimorr?lang=en" target="_blank">
+								<i style="line-height: 1.4;" class="fa fa-twitter"></i>
+								omrimor
+							</a>
+						</small>
 					</p>
 				</section>
 

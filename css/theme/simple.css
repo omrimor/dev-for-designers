@@ -7,6 +7,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -41,8 +42,8 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: "News Cycle", Impact, sans-serif;
-  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
@@ -206,9 +207,9 @@ body {
 .reveal a {
   color: #00008B;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:hover {
   color: #0000f1;
@@ -233,9 +234,9 @@ body {
   box-shadow: none; }
 
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
@@ -284,3 +285,79 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+
+/*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+ .reveal h2.white-text {
+  color: #ffffff;
+ }
+
+ .reveal h2.negative,
+ .reveal h3.negative,
+ .reveal small.negative {
+  background-color: #000;
+  color: #fff;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.green {
+  background-color: rgba(46, 204, 113,.7);
+}
+
+.blue {
+  background-color: rgba(52, 152, 219,.7);
+}
+
+.purple {
+  background-color: rgba(155, 89, 182,.7);
+}
+
+.orange {
+  background-color: rgba(230, 126, 34,.7);
+}
+
+.red {
+  background-color: rgba(231, 76, 60,.7);
+}
+
+.circle > span.circle-text {
+  color: #fff;
+  font-size: .5em;
+  line-height: 8;
+}
+
+.reveal section img.no-border,
+.reveal section pre.no-border {
+  border: none;
+  box-shadow: none;
+}
+
+.reveal .slides > section.floating-list ul {
+  list-style-type: none;
+  clear: both;
+}
+
+.reveal .slides > section.floating-list ul > li {
+  float: left;
+  margin-right: 30px;
+}
+
+.reveal .slides > section.floating-list li > p {
+  text-align: center;
+}
+
+.reveal small.tiny {
+  margin-top: -20px;
+  font-size: .25em;
+  display: block;
+  color: #bdc3c7;
+}
